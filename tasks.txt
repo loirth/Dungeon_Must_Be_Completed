@@ -1,0 +1,54 @@
+					Tasks
+
+
+Tilemap
+
+Exit
+
+Arrows
+
+Buttons (just a button like in the minecraft that crafts with 1 piece of wood/other material)
+
+Menu
+
+Post Processing
+
+Graphics:
+	- Player
+	
+	- Ball
+	
+	- Tiles
+	
+	- Other is coming soon...
+
+Sounds
+
+Font ?
+
+Icon
+
+Player:
+	- Movement
+ 	
+ 	- Type changing
+ 	
+ 	- State Machine
+ 	
+ 	- Types:
+ 		Block
+ 		Slime
+ 		Honey
+ 		Crate
+
+
+Ball:
+	- "AI" (watch in concept document)
+	
+	- Make interaction with player types (concept document)
+
+
+Enemy: (Yes, same as a ball tasks)
+	- "AI" like in a ball
+	
+	- Make interaction with player types
