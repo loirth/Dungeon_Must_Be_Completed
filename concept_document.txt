@@ -1,90 +1,90 @@
-							ДизДок
+                            DisDoc
+
+Game Name: Not determined
 
 
-Назва гри:  не визначився
+Description: A 2D platformer with dynamic decision-making to help a ball navigate levels.
 
 
-Опис ідеї: 2д платформер з динамічним прийняттям рішення для допомоги шаріку в проходженні рівня
+Genre: 2D platformer + possibly side-scroller
 
 
-Жанр: 2д платформер + мб сайдскроллер
+Graphics: 2D pixel art with a focus on simple geometric shapes and post-processing.
 
 
-Аудиторія: всі
+Target Audience: Everyone
 
 
-Особливості:
-	Ми граємо не за звичного ігрока, а за тайл.
-	Слов-мо  (Можливо не буде)
-	Поки все, але можливо ще різні варіанти проходження рівнів (залежить від лвл-дизайну)
+Features:
+  - We play as a tile instead of a typical player character.
+  - Slow-mo (Possibly won't be included).
+  - Possibility of different level progression options based on level design.
 
 
-Сюжет:
-	Розглянути:
-		Ми, тайл в данжі, який ожив.
-		В роздумах "чому?", "навіщо я тут" ми помічаємо, як в данж заходить ігрок - шарік.
-		Ми вирішуємо допомогти йому пройти данж, щоб знайти відповіді на запитання.
+Story:
+  Considered:
+    We are a tile in a dungeon that comes to life.
+    In our contemplation of "why?" and "why am I here?", we notice a player character, a ball, entering the dungeon.
+    We decide to help the ball navigate the dungeon and find answers to its questions.
 
+  Cutscene:
+    The tile starts trembling,
+    Then emerges from the wall,
+    Flips upwards,
+    Opens its eyes,
+    Question mark above it,
+    Blinks,
+    Cutscene ends with the screen fading out and smoothly transitioning to the menu while the music starts.
 
-	Катсцена:
-		Тайл починає труситись,
-		Потім вивалюється з стіни,
-		Перевертається наверх,
-		Відкриває очі,
-		Знак питання над ним,
-		Моргає,
-		Кінець катсцени - затухання екрану і плавне "розтухання" на меню, музика включається тоді ж.
+Mechanics:
+  - Jumping
+  - Long jump (slime ability)
+  - Tile transformation (each type will have its own abilities for the player and other objects, like buttons)
+  - Time slowdown (possibly)
 
+  Under consideration:
+    - Dash ?
+    - Buttons (press by absorbing an arrow and releasing or shooting it at the button, or transform into a box for the ball to knock off)
+    - Arrows (kill the ball, activate buttons, can be absorbed and used by the player when transformed into a slime)
+    - Press (kills the ball, activated by a button, player must prevent the button from activating)
+    - Laser ? (kills the ball, deactivated by a button, possibly temporary or permanent)
 
-Механіки:
-	- Стрибок
-	- Великий стрибок (можливість слайма)
-	- Зміна типу (кожний тип буде мати свої особливості як для ігрока, так і для інших предметів, типу кнопки)
-	- Сповільнення часу (можливо)
-	
-	На розгляді:
-		- Ривок ?
-		- Кнопки (нажати, ввібравши в себе стрілу і скинувши або пульнувши в кнопку, або стати ящиком щоб шарік скинув)
-		- Стріли (вбивають шарік, активують кнопки, можуть бути ввібрані ігроком з вибраним типом слайм)
-		- Прес (вбиває шарік, активується кнопкою, треба не дати кнопці активуватись)
-		- Лазер ? (вбиває шарік, ДЕактивується кнопкою, можливо на час або назавжди)
+World:
+  Simple room, possibly in side-scrolling format (long and continuous scrolling in one direction at a constant speed)
 
-Світ:
-	Проста кімната, можливо буде як сайдскроллер (довга, і екран безперестанку йду в один бік зі сталою швидкістю)
+Characters:
+  Ball:
+    Appearance - metallic/stone ball.
+    Rolls towards the finish line in one direction without AI, simply moving at a constant speed.
+    Interacts with different tile types:
+      - Slime: Bounces/changes direction along the x-axis if the slime was on the wall.
+      - Honey: Slows down movement on the floor and descent on the wall, while the ball rolls on the ceiling without falling until it exits the honey.
+      - Box: The ball can move the box, for example, to knock it onto a button.
+      - Block: Stops upon collision with a wall and rolls on the floor.
 
-Персонажі:
-	Шарік:
-		Вигляд - металічний/кам'яний шарік.
-		Котиться в одну сторону до фінішу, без АІ, просто рух в одну сторону з сталою швидкістю.
-		Взаємодіє з типами тайлів:
-			Слайм - Пружинить/змінює напрямок по осі х якщо слайм був на стіні.
-			Мед - Сповільнює рух на підлозі і спуск на стіні, на стелі шарік котиться і не падає поки не вийде з меду.
-			Ящик - Шарік може рухати його, наприклад щоб зкинути на кнопку.
-			Стіна/Підлога - Зупиняється при зіткненні з стіною, котиться по підлозі.
+  Player:
+    Appearance - wall tile.
+    Can:
+    - Move sideways.
+    - Jump.
+    - Change tile type (only themselves).
 
-	Ігрок:
-		Вигляд - тайл стіни.
-		Може:
-			Рухатись по сторонам,
-			Стрибати,
-			Змінювати тип тайлу (лиш себе)
+    Tile Types:
+    - Block (wall and floor):
+      - Regular block.
+    - Slime:
+      - Absorbs arrows.
+      - Can jump higher.
+    - Honey:
+      - Can crawl on the wall or ceiling.
+      - Absorbs arrows (possibly, or only when transformed into slime).
+    - Box (under consideration):
+      - Activates a button upon falling.
+      - Breaks when hit by an arrow or a press (if included).
+      - When broken, the player either dies or the block type switches to a wall.
 
-		Типи тайлів:
-			Блок (стіна і підлога):
-				Просто звичайний блок
-			Слайм:
-				Вбирає в себе стріли,
-				Може стрибати високо
-			Мед:
-				Може повзати по стіні,
-				Вбирає в себе стріли(можливо, а може лиш слайм)
-			Ящик (На розгляді):
-				Активує кнопку від падіння,
-				Ламається від стріли і пресу (якщо такий буде)
-				При ламанні ігрок або помирає або тип блоку переключається на стіну.
-
-	Ворог (На розгляді):
-		Вигляд: Чорний/вугільний шарік,
-		Має такий ж АІ як і шарік, але котиться вже до іншого виходу,
-		Всі тайли для нього вже виставлені при старті рівня,
-		Ігроку потрібно завадити йому пройти до свого виходу, інакше вихід нашого шаріка закриється.
+  Enemy (under consideration):
+    - Appearance: Black/coal ball.
+    - Has the same AI as the ball but rolls towards a different exit.
+    - All tiles for the enemy are set at the start of the level.
+    - The player needs to obstruct the enemy from reaching its exit, otherwise, the exit for our ball will be blocked.
