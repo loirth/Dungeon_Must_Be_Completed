@@ -1,41 +1,45 @@
 					Tasks
+		"(number)" it's in what order i made tasks
 
+Tilemap  || Completed!  (1)
 
-Tilemap
+!!!!!!!!  Make graphic for tilemap ceiling and floor, add autotiling in one tilemap and different names and id
+for that, then check with what type of tile collide a ball and what side/ceiling/floor a ball collide with player
+and here we are! now we can determinate what of player we touch: walls, floor or ceiling.
 
-Exit
+Exit  || Will be changed
 
 Arrows
 
 Buttons (just a button like in the minecraft that crafts with 1 piece of wood/other material)
 
-Menu
+Menu  || Completed!
 
 Post Processing
 
 Graphics:
-	- Player
+	- Player  || Completed! (4)  || May be changed!!!
 	
-	- Ball
+	- Ball  || Completed!
 	
-	- Tiles
+	- Tiles  || Completed!
 	
 	- Other is coming soon...
 
 Sounds
 
-Font ?
+Font  || Added!
 
 Icon
 
 Player:
-	- Movement
+	- Movement  || Completed!  (2)
  	
- 	- Type changing
+ 	- Type changing  || Completed! (5)
  	
- 	- State Machine
+ 	- State Machine  || Completed!  (3)
  	
- 	- Types:
+ 	- Types:  || Completed!
  		Block
  		Slime
  		Honey
@@ -43,9 +47,9 @@ Player:
 
 
 Ball:
-	- "AI" (watch in concept document)
+	- "AI" (watch in concept document)  || Completed!
 	
-	- Make interaction with player types (concept document)
+	- Make interaction with player types (concept document)  || Completed!
 
 
 Enemy: (Yes, same as a ball tasks)

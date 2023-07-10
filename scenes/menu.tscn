@@ -1,0 +1,258 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwocm8pq1npwr"]
+
+[ext_resource type="Script" path="res://scripts/Menu.gd" id="1_pyy4q"]
+[ext_resource type="FontFile" uid="uid://bp02ury8u1ev4" path="res://assets/font/pixelfj8pt1/pixelFJ8pt1__.TTF" id="2_2uhvd"]
+[ext_resource type="Texture2D" uid="uid://ow3svsw0ahkq" path="res://assets/block_types.png" id="4_0q3qr"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pyy4q")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(704, 448)
+layout_mode = 0
+offset_right = 704.0
+offset_bottom = 448.0
+color = Color(0.0470588, 0.0313726, 0.152941, 1)
+
+[node name="Button" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 251.0
+offset_top = 122.0
+offset_right = 459.0
+offset_bottom = 220.0
+theme_override_fonts/font = ExtResource("2_2uhvd")
+theme_override_font_sizes/font_size = 46
+text = "Play"
+flat = true
+icon_alignment = 1
+
+[node name="HTPButton" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 170.0
+offset_top = 242.0
+offset_right = 537.0
+offset_bottom = 303.0
+theme_override_fonts/font = ExtResource("2_2uhvd")
+theme_override_font_sizes/font_size = 46
+text = "How To Play"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(69, 380)
+scale = Vector2(2.20254, 2.20254)
+texture = ExtResource("4_0q3qr")
+vframes = 5
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(624, 353)
+scale = Vector2(2.20254, 2.20254)
+texture = ExtResource("4_0q3qr")
+vframes = 5
+frame = 1
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(141, 168)
+scale = Vector2(2.20254, 2.20254)
+texture = ExtResource("4_0q3qr")
+vframes = 5
+frame = 2
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(432, 384)
+scale = Vector2(2.20254, 2.20254)
+texture = ExtResource("4_0q3qr")
+vframes = 5
+frame = 3
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(551, 154)
+scale = Vector2(2.20254, 2.20254)
+texture = ExtResource("4_0q3qr")
+vframes = 5
+frame = 4
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 47.0
+offset_top = 30.0
+offset_right = 955.0
+offset_bottom = 90.0
+theme_override_fonts/font = ExtResource("2_2uhvd")
+theme_override_font_sizes/font_size = 34
+text = "Dungeon Must Be Completed"
+
+[node name="Control" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect2" type="ColorRect" parent="Control"]
+custom_minimum_size = Vector2(704, 448)
+layout_mode = 0
+offset_right = 704.0
+offset_bottom = 448.0
+color = Color(0.0470588, 0.0313726, 0.152941, 1)
+
+[node name="Control" type="Control" parent="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -25.0
+offset_top = 1.0
+offset_right = 15.0
+offset_bottom = 41.0
+
+[node name="Sprite2D6" type="Sprite2D" parent="Control/Control"]
+texture_filter = 1
+position = Vector2(171, 50)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_0q3qr")
+vframes = 5
+
+[node name="Label" type="Label" parent="Control/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 211.0
+offset_top = 37.0
+offset_right = 432.0
+offset_bottom = 63.0
+theme_override_fonts/font = ExtResource("2_2uhvd")
+theme_override_font_sizes/font_size = 20
+text = "Block, will be in the next lvl's"
+
+[node name="Control2" type="Control" parent="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -25.0
+offset_top = 71.0
+offset_right = 15.0
+offset_bottom = 111.0
+
+[node name="Sprite2D6" type="Sprite2D" parent="Control/Control2"]
+texture_filter = 1
+position = Vector2(171, 50)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_0q3qr")
+vframes = 5
+frame = 1
+
+[node name="Label" type="Label" parent="Control/Control2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 211.0
+offset_top = 37.0
+offset_right = 432.0
+offset_bottom = 63.0
+theme_override_fonts/font = ExtResource("2_2uhvd")
+theme_override_font_sizes/font_size = 20
+text = "Blue slime, bounce the player up"
+
+[node name="Control3" type="Control" parent="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -25.0
+offset_top = 144.0
+offset_right = 15.0
+offset_bottom = 184.0
+
+[node name="Sprite2D6" type="Sprite2D" parent="Control/Control3"]
+texture_filter = 1
+position = Vector2(171, 50)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_0q3qr")
+vframes = 5
+frame = 2
+
+[node name="Label" type="Label" parent="Control/Control3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 211.0
+offset_top = 37.0
+offset_right = 432.0
+offset_bottom = 63.0
+theme_override_fonts/font = ExtResource("2_2uhvd")
+theme_override_font_sizes/font_size = 20
+text = "Red slime, change player direction"
+
+[node name="Control4" type="Control" parent="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -25.0
+offset_top = 216.0
+offset_right = 15.0
+offset_bottom = 256.0
+
+[node name="Sprite2D6" type="Sprite2D" parent="Control/Control4"]
+texture_filter = 1
+position = Vector2(171, 50)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_0q3qr")
+vframes = 5
+frame = 3
+
+[node name="Label" type="Label" parent="Control/Control4"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 211.0
+offset_top = 37.0
+offset_right = 432.0
+offset_bottom = 63.0
+theme_override_fonts/font = ExtResource("2_2uhvd")
+theme_override_font_sizes/font_size = 20
+text = "Honey, hold player even on ceiling"
+
+[node name="Control5" type="Control" parent="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -25.0
+offset_top = 288.0
+offset_right = 15.0
+offset_bottom = 328.0
+
+[node name="Sprite2D6" type="Sprite2D" parent="Control/Control5"]
+texture_filter = 1
+position = Vector2(171, 50)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_0q3qr")
+vframes = 5
+frame = 4
+
+[node name="Label" type="Label" parent="Control/Control5"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 211.0
+offset_top = 37.0
+offset_right = 432.0
+offset_bottom = 63.0
+theme_override_fonts/font = ExtResource("2_2uhvd")
+theme_override_font_sizes/font_size = 20
+text = "Crate, will be in the next lvl's"
+
+[node name="BackButton" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 385.0
+offset_right = 404.0
+offset_bottom = 429.0
+theme_override_fonts/font = ExtResource("2_2uhvd")
+theme_override_font_sizes/font_size = 32
+text = "Back"
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="HTPButton" to="." method="_on_htp_button_pressed"]
+[connection signal="pressed" from="Control/BackButton" to="." method="_on_back_button_pressed"]
