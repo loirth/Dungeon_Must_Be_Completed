@@ -11,11 +11,13 @@ texture_filter = 1
 collision_mask = 8
 script = ExtResource("1_5rism")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_lteyq")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4.76837e-07, 4.76837e-07)
+scale = Vector2(0.9375, 0.9375)
 texture = ExtResource("2_svsv4")
 vframes = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_lteyq")
 
 [node name="BlockPosition" type="Marker2D" parent="."]

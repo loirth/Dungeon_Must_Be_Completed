@@ -16,25 +16,25 @@ Target Audience: Everyone
 
 
 Features:
-  - We play as a tile instead of a typical player character.
-  - Slow-mo (Possibly won't be included).
-  - Possibility of different level progression options based on level design.
-
+	- We play as a tile instead of a typical player character.
+	- Slow-mo (Possibly won't be included).
+	- Possibility of different level progression options based on level design.
 
 Story:
-  Considered:
-	We are a tile in a dungeon that comes to life.
-	In our contemplation of "why?" and "why am I here?", we notice a player character, a ball, entering the dungeon.
-	We decide to help the ball navigate the dungeon and find answers to its questions.
+	Considered:
+		We are a tile in a dungeon that comes to life.
+		In our contemplation of "why?" and "why am I here?", we notice a player character, a ball, entering the dungeon.
+		We decide to help the ball navigate the dungeon and find answers to its questions.
 
-  Cutscene:
-	The tile starts trembling,
-	Then emerges from the wall,
-	Flips upwards,
-	Opens its eyes,
-	Question mark above it,
-	Blinks,
-	Cutscene ends with the screen fading out and smoothly transitioning to the menu while the music starts.
+	Cutscene:
+		The tile starts trembling,
+		Then emerges from the wall,
+		Flips upwards,
+		Opens its eyes,
+		Question mark above it,
+		Blinks,
+		Cutscene ends with the screen fading out and smoothly transitioning to the menu while the music starts.
+
 
 Mechanics:
   - Jumping
@@ -42,14 +42,16 @@ Mechanics:
   - Tile transformation (each type will have its own abilities for the player and other objects, like buttons)
   - Time slowdown (possibly)
 
-  Under consideration:
-	- Dash ?
+Under consideration:
+	- Level editor
+	- Dash
 	- Buttons (press by absorbing an arrow and releasing or shooting it at the button, or transform into a box for the ball to knock off)
-	- Arrows (kill the ball, activate buttons, can be absorbed and used by the player when transformed into a slime)
-	- Press (kills the ball, activated by a button, player must prevent the button from activating)
-	- Laser ? (kills the ball, deactivated by a button, possibly temporary or permanent)
+	- Arrows (kill the ball, activate buttons, can be absorbed and used by the player when transformed into a slime or destroyed by other player type)
+	- Press (kills the ball, activated by a button, player must prevent the button from activating, or stands with type "Block" to prevent the press kill the ball)
+	- Laser (kills the ball and the player in all types!, deactivated by a button, possibly temporary or permanent)
 
 World:
+  Many levels
   Simple room, possibly in side-scrolling format (long and continuous scrolling in one direction at a constant speed)
 
 Characters:
@@ -68,10 +70,11 @@ Characters:
 	- Move sideways.
 	- Jump.
 	- Change tile type (only themselves).
-
+	- Somehow can kill the enemy tiles         || Need to write how!
+	
 	Tile Types:
 	- Block (wall and floor):
-	  - Regular block.
+		- Regular block.
 	- Slime:
 	  - Absorbs arrows.
 	  - Can jump higher.
@@ -83,8 +86,15 @@ Characters:
 	  - Breaks when hit by an arrow or a press (if included).
 	  - When broken, the player either dies or the block type switches to a wall.
 
-  Enemy (under consideration):
+  Enemy ball: || doesn't exist in v.0.0.1 (see change log to watch when I add him)
 	- Appearance: Black/coal ball.
 	- Has the same AI as the ball but rolls towards a different exit.
 	- All tiles for the enemy are set at the start of the level.
 	- The player needs to obstruct the enemy from reaching its exit, otherwise, the exit for our ball will be blocked.
+
+  Enemy tiles:
+	- Appearance: Tiles of different types with angry eyes, which also can always be red
+	- First try to kill player (different types do this in different ways),
+		And when the timer is of and the ball start moving,
+		no matter if player was killed, that tiles go to prevent the ball to reach the exit.
+	- Can be killed by player somehow (watch in player description)

@@ -1,0 +1,18 @@
+		Change Log
+
+Notes on v.0.0.1 (Jam Version):
+	The game is playable!
+	Only one level and some bugs
+	
+	I need to:
+		- Fix bug when:
+			block (honey, but maybe others too) fly away if you place in that block another block
+		- Add sounds and music, but not from sfxr, they too bad
+		- Make better tilemap (only one tileset and autotiling)
+		- Add post processing
+		- Add some levels
+		- Add new mechanics:
+			- Arrows
+			- Buttons
+			- Enemy ball
+			- Enemy tiles (watch concept document)

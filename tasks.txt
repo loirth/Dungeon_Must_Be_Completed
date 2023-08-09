@@ -1,58 +1,79 @@
 					Tasks
-		"(number)" it's in what order i made tasks
 
-Tilemap  || Completed!  (1)
+- More leves, at least 10
 
-!!!!!!!!  Make graphic for tilemap ceiling and floor, add autotiling in one tilemap and different names and id
-for that, then check with what type of tile collide a ball and what side/ceiling/floor a ball collide with player
-and here we are! now we can determinate what of player we touch: walls, floor or ceiling.
 
-Exit  || Will be changed
+?? - Make different rooms for HowToPlay and Levels, player can walk in that rooms. ??
 
-Arrows
 
-Buttons (just a button like in the minecraft that crafts with 1 piece of wood/other material)
+- Lvl Editor
 
-Menu  || Completed!
 
-Post Processing
+?? - Sandbox room (just an endless amount of blocks) ??
 
-Graphics:
-	- Player  || Completed! (4)  || May be changed!!!
+
+- Exit  || Completed! Can be modified in the future!
+
+
+- Arrows
+
+
+- Buttons (just a button like in the minecraft that crafts with 1 piece of wood/other material)
+
+
+- Better menu
+
+
+- Post Processing  || I fuck up godot 4.x because it doesn't support glow in compability render.
+
+
+- Sounds
+
+- Graphics:
+	- Icon  || Completed!
+	- Background for menu
+
+
+Player:  || Completed!  || Can be changed in the future!
+	- Movement  || Completed!
 	
-	- Ball  || Completed!
+	- Type changing  || Completed!
 	
-	- Tiles  || Completed!
+	- State Machine  || Completed!
 	
-	- Other is coming soon...
-
-Sounds
-
-Font  || Added!
-
-Icon
-
-Player:
-	- Movement  || Completed!  (2)
- 	
- 	- Type changing  || Completed! (5)
- 	
- 	- State Machine  || Completed!  (3)
- 	
- 	- Types:  || Completed!
- 		Block
- 		Slime
- 		Honey
- 		Crate
+	- Types:  || Completed!
+		Block  || Completed!
+		Slime  || Completed!
+		Honey  || Completed!
+		Crate  || Completed!
 
 
 Ball:
 	- "AI" (watch in concept document)  || Completed!
 	
+	- Ability to easy change ball options, like speed, gravity etc.
+	
 	- Make interaction with player types (concept document)  || Completed!
 
 
-Enemy: (Yes, same as a ball tasks)
+Enemy:
 	- "AI" like in a ball
 	
 	- Make interaction with player types
+
+
+
+	!!!!!!!!! Completed tasks !!!!!!!!!
+
+Tilemap  || Completed!
+
+
+Graphics: || Remaded!
+	- Player  || Completed!
+
+	- Ball  || Completed!
+
+	- Tiles  || Completed!
+
+
+Font || Completed!

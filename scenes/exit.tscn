@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnwoi5qg420i2"]
+
+[ext_resource type="Script" path="res://scripts/exit.gd" id="1_ohhdw"]
+[ext_resource type="FontFile" uid="uid://bp02ury8u1ev4" path="res://assets/font/pixelfj8pt1/pixelFJ8pt1__.TTF" id="1_pxcrk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_poxrp"]
+size = Vector2(34.4056, 20)
+
+[node name="Exit" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_ohhdw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4.76837e-07, 0)
+scale = Vector2(1.7439, 3.01667)
+shape = SubResource("RectangleShape2D_poxrp")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = -20.0
+offset_top = -26.0
+offset_right = 20.0
+offset_bottom = -3.0
+theme_override_fonts/font = ExtResource("1_pxcrk")
+text = "Exit"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

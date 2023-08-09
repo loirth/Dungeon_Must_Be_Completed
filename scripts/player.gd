@@ -1,11 +1,10 @@
 extends CharacterBody2D
 
-
 var lvl = 1
 
 var block_scene = preload("res://scenes/block.tscn")
 
-@onready var ui = find_parent("Main").find_child("UI")
+@onready var ui
 
 enum State_Type {BLOCK, SLIME_V, SLIME_H, HONEY, CRATE}
 var state_type := State_Type.BLOCK
@@ -19,7 +18,6 @@ var max_honeys = 3
 var max_crates = 3
 
 
-
 # Gravity
 var jump_force = 150
 var gravity = 0
@@ -29,6 +27,8 @@ var can_add_to_gravity = true
 
 
 func _ready():
+	if not find_parent("MenuRoom"):
+		ui = find_parent("Main").find_child("UI")
 	if lvl == 1:
 		max_blocks = 0
 		max_v_slimes = 2
@@ -62,18 +62,21 @@ func init():
 	block.position.y = int(block_position.y)
 
 func init_block():
-	if state_type == State_Type.BLOCK && max_blocks > 0: init()
-	if state_type == State_Type.SLIME_V && max_v_slimes > 0: init()
-	if state_type == State_Type.SLIME_H && max_h_slimes > 0: init()
-	if state_type == State_Type.HONEY && max_honeys > 0: init()
-	if state_type == State_Type.CRATE && max_crates > 0: init()
-	
-	match state_type:
-		State_Type.BLOCK: max_blocks -= 1
-		State_Type.SLIME_V: max_v_slimes -= 1
-		State_Type.SLIME_H: max_h_slimes -= 1
-		State_Type.HONEY: max_honeys -= 1
-		State_Type.CRATE: max_crates -= 1
+	if state_type == State_Type.BLOCK && max_blocks > 0:
+		init()
+		max_blocks -= 1
+	if state_type == State_Type.SLIME_V && max_v_slimes > 0:
+		init()
+		max_v_slimes -= 1
+	if state_type == State_Type.SLIME_H && max_h_slimes > 0:
+		init()
+		max_h_slimes -= 1
+	if state_type == State_Type.HONEY && max_honeys > 0:
+		init()
+		max_honeys -= 1
+	if state_type == State_Type.CRATE && max_crates > 0:
+		init()
+		max_crates -= 1
 
 
 func apply_gravity():
@@ -87,7 +90,8 @@ func apply_gravity():
 
 
 func _physics_process(delta):
-	
+	if Input.is_action_just_pressed("menu"):
+		get_tree().change_scene_to_file("res://scenes/menu.tscn")
 	if Input.is_action_just_pressed("restart"):
 		get_tree().reload_current_scene()
 	
@@ -119,8 +123,3 @@ func _physics_process(delta):
 	apply_gravity()
 	
 	move_and_slide()
-
-
-func _on_exit_body_entered(body):
-	if body.name.begins_with("Ball"):
-		get_tree().change_scene_to_file("res://scenes/menu.tscn")

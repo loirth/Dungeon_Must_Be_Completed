@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bqc8aadfa0w7l"]
 
 [ext_resource type="FontFile" uid="uid://bp02ury8u1ev4" path="res://assets/font/pixelfj8pt1/pixelFJ8pt1__.TTF" id="1_1iq23"]
-[ext_resource type="Script" path="res://scenes/ui.gd" id="1_evqok"]
+[ext_resource type="Script" path="res://scripts/ui.gd" id="1_i1fu2"]
 [ext_resource type="Texture2D" uid="uid://ow3svsw0ahkq" path="res://assets/block_types.png" id="2_pnnc3"]
 
 [node name="UI" type="Control"]
@@ -11,7 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_evqok")
+script = ExtResource("1_i1fu2")
 
 [node name="Block_Count" type="Control" parent="."]
 anchors_preset = 0

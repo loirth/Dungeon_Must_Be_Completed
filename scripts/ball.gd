@@ -6,22 +6,20 @@ var can_move = false
 
 var tilemap_collision = false
 
+@export var time = 10
+
 @export var speed = 300
-var direction = Vector2.RIGHT
 var gravity = 0
-var jump_force = 150
+@export var jump_force = 150
 var can_add_to_gravity = true
 
 var time_left
 
 func _ready():
-	$Timer.wait_time = 10
+	$Timer.wait_time = time
 	time_left = $Timer.wait_time
 	ui.set_time_label(time_left)
-
-
-func set_tilemap_collision(boolean: bool):
-	tilemap_collision = boolean
+	$Timer.start()
 
 
 func match_type(player_type):
@@ -41,7 +39,7 @@ func match_type(player_type):
 
 
 func slime_bounce_v():
-	gravity = -150
+	gravity = -jump_force
 
 func slime_bounce_h():
 	speed = -speed
@@ -60,8 +58,9 @@ func apply_gravity():
 
 func _physics_process(delta):
 	if can_move:
-		velocity.y = gravity * 200 * delta
 		velocity.x = speed
+	
+	velocity.y = gravity * 200 * delta
 		
 	apply_gravity()
 	move_and_slide()
